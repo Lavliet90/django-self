@@ -24,11 +24,7 @@ class AddPostForm(forms.ModelForm):
         if len(title) > 200:
             raise ValidationError('Length exceeds 200 characters')
         return title
-    # title = forms.CharField(max_length=255, label='Title', widget=forms.TextInput(attrs={'class': 'form-input'}))
-    # slug = forms.SlugField(max_length=255, label='URL')
-    # content = forms.CharField(widget=forms.Textarea(attrs={'cols': 60, 'rows': 10}), label='Content')
-    # id_publisher = forms.BooleanField(label='Publication', required=False, initial=True)
-    # cat = forms.ModelChoiceField(queryset=Category.objects.all(), label='Category', empty_label='Category not selected')
+
 
 
 class RegisterUserForm(UserCreationForm):
