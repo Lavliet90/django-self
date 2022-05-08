@@ -24,11 +24,6 @@ class AddPostForm(forms.ModelForm):
         if len(title) > 200:
             raise ValidationError('Length exceeds 200 characters')
         return title
-    # title = forms.CharField(max_length=255, label='Title', widget=forms.TextInput(attrs={'class': 'form-input'}))
-    # slug = forms.SlugField(max_length=255, label='URL')
-    # content = forms.CharField(widget=forms.Textarea(attrs={'cols': 60, 'rows': 10}), label='Content')
-    # id_publisher = forms.BooleanField(label='Publication', required=False, initial=True)
-    # cat = forms.ModelChoiceField(queryset=Category.objects.all(), label='Category', empty_label='Category not selected')
 
 
 class RegisterUserForm(UserCreationForm):
@@ -39,8 +34,7 @@ class RegisterUserForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('username','email', 'password1', 'password2')
-
+        fields = ('username', 'email', 'password1', 'password2')
 
 
 class LoginUserForm(AuthenticationForm):
@@ -51,5 +45,5 @@ class LoginUserForm(AuthenticationForm):
 class ContactForm(forms.Form):
     name = forms.CharField(label='Name', max_length=255)
     email = forms.EmailField(label='Email')
-    content = forms.CharField(widget=forms.Textarea(attrs={'cols':60, 'rows': 10}))
+    content = forms.CharField(widget=forms.Textarea(attrs={'cols': 60, 'rows': 10}))
     capatcha = CaptchaField()

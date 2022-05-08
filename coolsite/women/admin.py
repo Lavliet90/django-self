@@ -12,9 +12,10 @@ class WomenAdmin(admin.ModelAdmin):
     list_filter = ('id_publisher', 'time_create')
     prepopulated_fields = {'slug': ('title',)}
     fields = (
-    'title', 'slug', 'cat', 'content', 'photo', 'get_html_photo', 'id_publisher', 'time_create', 'time_update')
+        'title', 'slug', 'cat', 'content', 'photo', 'get_html_photo', 'id_publisher', 'time_create', 'time_update')
     readonly_fields = ('time_create', 'time_update', 'get_html_photo')
     save_on_top = True
+
     def get_html_photo(self, object):
         if object.photo:
             return mark_safe(f"<img src='{object.photo.url}' width = 50>")
