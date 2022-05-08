@@ -27,6 +27,11 @@ class WomenHome(DataMixin, ListView):
         return Women.objects.filter(id_publisher=True).select_related('cat')
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7ee04ce80059732c00beb51c1e18ebfefed55ef8
 def about(request):
     return render(request, "women/about.html", {'title': 'About us', "menu": menu})
 
@@ -43,6 +48,11 @@ class AddPage(LoginRequiredMixin, DataMixin, CreateView):
         return dict(list(context.items()) + list(c_def.items()))
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7ee04ce80059732c00beb51c1e18ebfefed55ef8
 class ContactFormView(DataMixin, FormView):
     form_class = ContactForm
     template_name = 'women/contact.html'
