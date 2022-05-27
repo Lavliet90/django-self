@@ -21,9 +21,9 @@ If you are authorized. then you can add an article via "Add article".
 
 
 There is also an admin panel for management:
-'''
+```
 http://127.0.0.1:8000/admin/
-'''
+```
 but before using it, you need to create an administrator with the command:
 '''python3 manage.py createsuperuser'''
 Then you will be asked to enter a nickname, email (optional), password.
