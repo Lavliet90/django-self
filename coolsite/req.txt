@@ -4,3 +4,5 @@ Django==4.0.3
 Pillow==9.0.1
 sqlparse==0.4.2
 django_debug_toolbar==3.4.0
+django-simple-captcha==0.5.17
+captcha==0.4

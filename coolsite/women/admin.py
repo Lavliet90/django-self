@@ -32,7 +32,5 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Women, WomenAdmin)
 admin.site.register(Category, CategoryAdmin)
-
 admin.site.site_title = 'Women\'s site admin panel'
-
 admin.site.site_header = 'Women\'s site admin panel.'

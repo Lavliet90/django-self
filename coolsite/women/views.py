@@ -1,7 +1,6 @@
 from django.contrib.auth import logout, login
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse, HttpResponseNotFound, Http404
+from django.shortcuts import render, redirect
+from django.http import HttpResponseNotFound
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -9,7 +8,6 @@ from django.contrib.auth.views import LoginView
 from django.views.generic.edit import FormView
 
 from .forms import *
-from .models import *
 from .utils import *
 
 
@@ -27,11 +25,6 @@ class WomenHome(DataMixin, ListView):
         return Women.objects.filter(id_publisher=True).select_related('cat')
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 7ee04ce80059732c00beb51c1e18ebfefed55ef8
 def about(request):
     return render(request, "women/about.html", {'title': 'About us', "menu": menu})
 
@@ -48,11 +41,6 @@ class AddPage(LoginRequiredMixin, DataMixin, CreateView):
         return dict(list(context.items()) + list(c_def.items()))
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 7ee04ce80059732c00beb51c1e18ebfefed55ef8
 class ContactFormView(DataMixin, FormView):
     form_class = ContactForm
     template_name = 'women/contact.html'

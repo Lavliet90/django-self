@@ -24,10 +24,6 @@ class AddPostForm(forms.ModelForm):
         if len(title) > 200:
             raise ValidationError('Length exceeds 200 characters')
         return title
-<<<<<<< HEAD
-=======
-
->>>>>>> 7ee04ce80059732c00beb51c1e18ebfefed55ef8
 
 
 class RegisterUserForm(UserCreationForm):
@@ -49,9 +45,6 @@ class LoginUserForm(AuthenticationForm):
 class ContactForm(forms.Form):
     name = forms.CharField(label='Name', max_length=255)
     email = forms.EmailField(label='Email')
-<<<<<<< HEAD
     content = forms.CharField(widget=forms.Textarea(attrs={'cols': 60, 'rows': 10}))
-=======
-    content = forms.CharField(widget=forms.Textarea(attrs={'cols':60, 'rows': 10}))
->>>>>>> 7ee04ce80059732c00beb51c1e18ebfefed55ef8
+    content = forms.CharField(widget=forms.Textarea(attrs={'cols': 60, 'rows': 10}))
     capatcha = CaptchaField()
