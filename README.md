@@ -2,7 +2,7 @@
 *(This page was made for educational purposes.)*
 
   To start the installation, clone the repository, then go to the directory
-cd coolsite
+```cd coolsite```
 
   Next, install the required packages:
 ```
