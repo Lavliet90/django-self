@@ -7,7 +7,20 @@
   Next, install the required packages:
 ```
 python3 -m pip install -r req.txt
+
 ```
+
+  Create new migrations
+```
+python3 manage.py makemigrations
+```
+
+
+  Now apply the migrations
+```
+python3 manage.py migrate
+```
+
   And we start the server locally with the command:
 ```
 python3 manage.py runserver
